@@ -1,0 +1,35 @@
+### byte-compiled ###
+**/__pycache__
+**/*.so
+
+
+# nodejs dependencies
+node_modules/
+
+
+# python virtual environment
+.venv
+
+
+# python wheel
+dist
+
+
+# dotenv environment variables file
+.env
+.env.test
+!.env.example
+
+
+# macos
+.DS_Store
+
+
+# python
+__pycache__
+
+
+# workspace settings
+.idea
+.ignore
+.vscode
