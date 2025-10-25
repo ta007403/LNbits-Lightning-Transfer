@@ -33,7 +33,8 @@ def pay_invoice(bolt11_invoice):
         "out": True,
         "bolt11": bolt11_invoice
     }
-    response = requests.post(LNBITS_API_URL, json=data, headers=headers)
+    url = f"{LNBITS_API_URL}/api/v1/payments"
+    response = requests.post(url, json=data, headers=headers)
 
     if response.status_code == 201:
         print("✅ Payment sent successfully!")
@@ -52,3 +53,4 @@ if __name__ == "__main__":
         pay_invoice(invoice)
     except Exception as e:
         print("🔥 Error:", e)
+
